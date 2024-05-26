@@ -7,7 +7,7 @@ An Internet Media Store - ITSS Software Developemt capstone project.
 | Đinh Việt Quang  | Team Leader |            |
 | Trịnh Diễm Quỳnh | Member      |            |
 | Ngô Minh Quý     | Member      |            |
-| Hồ Nam Sơn       | Member      |            |
+| Hồ Nam Sơn       | Member      | 20215239    |
 | Lê Phú Tài       | Member      |            |  
 
 ## Table of contents
