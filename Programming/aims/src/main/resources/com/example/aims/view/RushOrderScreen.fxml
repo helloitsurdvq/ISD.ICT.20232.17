@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.aims.view.RushOrderScreenController">
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="600.0" style="-fx-background-color: #edbfbb;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="48.0" prefWidth="41.0" />
+            <ImageView fitHeight="30.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/shopping-bag.png" />
+               </image>
+            </ImageView>
+            <Pane prefHeight="41.0" prefWidth="10.0" />
+            <Text fill="#21b5dd" strokeType="OUTSIDE" strokeWidth="0.0" text="Rush Order" wrappingWidth="149.7734375">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="239.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="27.0" prefWidth="600.0" />
+            <HBox>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+               <children>
+                  <GridPane prefHeight="200.0" prefWidth="419.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="211.0" minWidth="10.0" prefWidth="211.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="107.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Phone" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Province/City" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Address" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Shipping Instructions" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="nameText" strokeType="OUTSIDE" strokeWidth="0.0" text="user 1" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Text>
+                        <Text fx:id="phoneText" strokeType="OUTSIDE" strokeWidth="0.0" text="0123456789" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Text>
+                        <Text fx:id="provinceText" strokeType="OUTSIDE" strokeWidth="0.0" text="Hanoi" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Text>
+                        <Text fx:id="addressText" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Time" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Text>
+                        <TextField fx:id="shippingInstructionsText" onAction="#Submit" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <ComboBox fx:id="timeComboBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+                  <Pane prefHeight="200.0" prefWidth="310.0">
+                     <children>
+                        <GridPane fx:id="gridPane" alignment="CENTER" layoutY="2.0" prefHeight="65.0" prefWidth="567.0">
+                           <columnConstraints>
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="119.0" minWidth="10.0" prefWidth="119.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="126.0" minWidth="10.0" prefWidth="114.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="84.0" minWidth="10.0" prefWidth="57.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="124.0" minWidth="10.0" prefWidth="124.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="87.0" minWidth="10.0" prefWidth="77.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="145.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Product">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Unit Price" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total Price" wrappingWidth="85.30078125" GridPane.columnIndex="3">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rush order" wrappingWidth="100.783203125" GridPane.columnIndex="4">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Text>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <VBox alignment="CENTER" prefHeight="201.0" prefWidth="1190.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="212.0" prefWidth="1190.0">
+               <children>
+                  <GridPane prefHeight="179.0" prefWidth="259.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Subtotal:">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Text>
+                        <Text fx:id="subTotalText" strokeType="OUTSIDE" strokeWidth="0.0" text="1000đ" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Shipping fees" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Text>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Text fx:id="shippingFeeText" strokeType="OUTSIDE" strokeWidth="0.0" text="100đ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Text>
+                           </children>
+                        </HBox>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Amount:" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Text>
+                        <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <Text fx:id="amountText" strokeType="OUTSIDE" strokeWidth="0.0" text="1200đ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Text>
+                           </children>
+                        </HBox>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="VAT" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="vatText" strokeType="OUTSIDE" strokeWidth="0.0" text="1000đ" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </GridPane>
+                  <Pane prefHeight="96.0" prefWidth="140.0" />
+                  <Button fx:id="submitBtn" alignment="CENTER" mnemonicParsing="false" onAction="#Submit" prefHeight="47.0" prefWidth="65.0" text="OK">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="30.0" />
+               </padding>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets left="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </bottom>
+</BorderPane>

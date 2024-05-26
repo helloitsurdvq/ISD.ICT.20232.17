@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.aims.view.ShippingScreenController">
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #edbfbb;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="48.0" prefWidth="41.0" />
+            <ImageView fitHeight="30.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/shopping-bag.png" />
+               </image>
+            </ImageView>
+            <Pane prefHeight="41.0" prefWidth="10.0" />
+            <Text fill="#21b5dd" strokeType="OUTSIDE" strokeWidth="0.0" text="Shipping" wrappingWidth="149.7734375">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="384.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="27.0" prefWidth="600.0" />
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Phone" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Province/City" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Address" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Shipping Instructions" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="nameText" GridPane.columnIndex="1" />
+                  <TextField fx:id="phoneText" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="addressText" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="shippingInstructionsText" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <ChoiceBox fx:id="provinceChoiceBox" maxHeight="50" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="An Giang" />
+                           <String fx:value="Bà rịa Vũng Tàu" />
+                           <String fx:value="Bạc Liêu" />
+                           <String fx:value="Bắc Giang" />
+                           <String fx:value="Bắc Kạn" />
+                           <String fx:value="Bắc Ninh" />
+                           <String fx:value="Bến Tre" />
+                           <String fx:value="Bình Dương" />
+                           <String fx:value="Bình Định" />
+                           <String fx:value="Bình Phước" />
+                           <String fx:value="Bình Thuận" />
+                           <String fx:value="Cà Mau" />
+                           <String fx:value="Cao Bằng" />
+                           <String fx:value="Cần Thơ" />
+                           <String fx:value="Đà Nẵng" />
+                           <String fx:value="Đắk Lắk" />
+                           <String fx:value="Đắk Nông" />
+                           <String fx:value="Điện Biên" />
+                           <String fx:value="Đồng Nai" />
+                           <String fx:value="Đồng Tháp" />
+                           <String fx:value="Gia Lai" />
+                           <String fx:value="Hà Giang" />
+                           <String fx:value="Hà Nam" />
+                           <String fx:value="Hà Nội" />
+                           <String fx:value="Hà Tĩnh" />
+                           <String fx:value="Hải Dương" />
+                           <String fx:value="Hải Phòng" />
+                           <String fx:value="Hậu Giang" />
+                           <String fx:value="Hòa Bình" />
+                           <String fx:value="Hưng Yên" />
+                           <String fx:value="Khánh Hòa" />
+                           <String fx:value="Kiên Giang" />
+                           <String fx:value="Kon Tum" />
+                           <String fx:value="Lai Châu" />
+                           <String fx:value="Lạng Sơn" />
+                           <String fx:value="Lào Cai" />
+                           <String fx:value="Lâm Đồng" />
+                           <String fx:value="Long An" />
+                           <String fx:value="Nam Định" />
+                           <String fx:value="Nghệ An" />
+                           <String fx:value="Ninh Bình" />
+                           <String fx:value="Ninh Thuận" />
+                           <String fx:value="Phú Thọ" />
+                           <String fx:value="Phú Yên" />
+                           <String fx:value="Quảng Bình" />
+                           <String fx:value="Quảng Nam" />
+                           <String fx:value="Quảng Ngãi" />
+                           <String fx:value="Quảng Ninh" />
+                           <String fx:value="Quảng Trị" />
+                           <String fx:value="Sóc Trăng" />
+                           <String fx:value="Sơn La" />
+                           <String fx:value="Tây Ninh" />
+                           <String fx:value="Thái Bình" />
+                           <String fx:value="Thái Nguyên" />
+                           <String fx:value="Thanh Hóa" />
+                           <String fx:value="Thừa Thiên Huế" />
+                           <String fx:value="Tiền Giang" />
+                           <String fx:value="TP Hồ Chí Minh" />
+                           <String fx:value="Trà Vinh" />
+                           <String fx:value="Tuyên Quang" />
+                           <String fx:value="Vĩnh Long" />
+                           <String fx:value="Vĩnh Phúc" />
+                           <String fx:value="Yên Bái" />
+
+                        </FXCollections>
+                     </items>
+                  </ChoiceBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="100.0" right="100.0" top="50.0" />
+               </VBox.margin>
+            </GridPane>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <VBox alignment="CENTER" prefHeight="180.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER">
+               <children>
+                  <Button fx:id="backBtn" contentDisplay="CENTER" mnemonicParsing="false" onAction="#backToCartScreen" prefHeight="53.0" prefWidth="197.0" text="Back">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="submitBtn" contentDisplay="CENTER" mnemonicParsing="false" onAction="#requestInvoice" prefHeight="53.0" prefWidth="197.0" text="Comfirm delivery">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>
