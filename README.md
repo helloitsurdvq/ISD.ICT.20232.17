@@ -5,7 +5,7 @@ An Internet Media Store - ITSS Software Developemt capstone project.
 | Name             | Role        | Student ID |
 |:-----------------| :---------- |:-----------|
 | Đinh Việt Quang  | Team Leader |            |
-| Trịnh Diễm Quỳnh | Member      |            |
+| Trịnh Diễm Quỳnh | Member      | 20210737   |
 | Ngô Minh Quý     | Member      |            |
 | Hồ Nam Sơn       | Member      | 20215239    |
 | Lê Phú Tài       | Member      |            |  
