@@ -10,7 +10,7 @@ An Internet Media Store - ITSS Software Developemt capstone project.
 | Trịnh Diễm Quỳnh | Member      | 20210737   |
 | Ngô Minh Quý     | Member      | 20215238   |
 | Hồ Nam Sơn       | Member      | 20215239   |
-| Lê Phú Tài       | Member      |            |  
+| Lê Phú Tài       | Member      | 20210759   |  
 
 ## Table of contents
 
