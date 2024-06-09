@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <HBox prefHeight="788.0" prefWidth="1326.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <AnchorPane prefHeight="792.0" prefWidth="228.0" style="-fx-background-color: B4D4FF;">
+                            <children>
+                                <VBox layoutY="315.0" prefHeight="238.0" prefWidth="228.0" style="-fx-padding: 8px;">
+                                    <children>
+                                        <Button fx:id="mediaManage" mnemonicParsing="false" prefHeight="33.0" prefWidth="228.0" style="-fx-cursor: hand;" text="Media">
+                                            <font>
+                                                <Font name="System Bold" size="16.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="orderManage" mnemonicParsing="false" prefHeight="33.0" prefWidth="228.0" snapToPixel="false" style="-fx-cursor: hand;" text="Order">
+                                            <font>
+                                                <Font name="System Bold" size="16.0" />
+                                            </font>
+                                        </Button>
+                                    </children>
+                                </VBox>
+                                <Button fx:id="backHome" layoutX="7.0" layoutY="671.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="215.0" style="-fx-cursor: hand; -fx-background-color: #Ff4d4d;" text="Log out" textFill="#ecdfdf">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Button>
+                                <ImageView fitHeight="175.0" fitWidth="200.0" layoutX="14.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../assets/Logo.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </VBox>
+                <VBox alignment="TOP_RIGHT" prefHeight="789.0" prefWidth="1110.0" style="-fx-padding: 24px;">
+                    <children>
+                        <ComboBox fx:id="addComboBox" prefHeight="30.0" prefWidth="150.0" promptText="Create" />
+                        <TableView fx:id="mediaTableView" prefHeight="726.0" prefWidth="1050.0">
+                            <columns>
+                                <TableColumn fx:id="idColumn" prefWidth="94.0" text="ID" />
+                                <TableColumn fx:id="titleColumn" prefWidth="123.0" text="Title" />
+                                <TableColumn fx:id="categoryColumn" prefWidth="121.0" text="Category" />
+                                <TableColumn fx:id="valueColumn" prefWidth="74.0" text="Value" />
+                                <TableColumn fx:id="priceColumn" minWidth="0.0" prefWidth="92.0" text="Price" />
+                                <TableColumn fx:id="quantityColumn" minWidth="0.0" prefWidth="94.0" text="Quantity" />
+                                <TableColumn fx:id="typeColumn" minWidth="0.0" prefWidth="138.0" text="Type" />
+                                <TableColumn fx:id="imageColumn" minWidth="0.0" prefWidth="166.0" text="Image" />
+                                <TableColumn fx:id="actionsColumn" prefWidth="159.0" text="Actions" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
