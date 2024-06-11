@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="615.0" layoutY="29.0" prefHeight="35.0" prefWidth="136.0" text="Book Detail" textFill="#434fcc">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="exitButton" layoutX="1260.0" layoutY="25.0" mnemonicParsing="false" prefWidth="44.0" style="-fx-background-color: #Ff4d4d;" text="X">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="356.0" layoutY="76.0" prefHeight="678.0" prefWidth="638.0">
+         <children>
+            <ImageView fx:id="imageField" fitHeight="283.0" fitWidth="261.0" layoutX="219.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/book/book2.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="236.0" layoutY="320.0" prefHeight="20.0" prefWidth="73.0" text="Author: ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="authorText" layoutX="377.0" layoutY="320.0" text="Label">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="208.0" layoutY="354.0" prefHeight="20.0" prefWidth="101.0" text="Cover Type: ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="coverTypeText" layoutX="377.0" layoutY="354.0" text="Label">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="221.0" layoutY="390.0" prefHeight="20.0" prefWidth="88.0" text="Publisher: ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="publisherText" layoutX="377.0" layoutY="390.0" text="Label">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="208.0" layoutY="427.0" prefHeight="20.0" prefWidth="101.0" text="Public Date: ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="pubDateText" layoutX="377.0" layoutY="427.0" text="Label">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="173.0" layoutY="466.0" prefHeight="20.0" prefWidth="136.0" text="Number of pages: ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="numPageText" layoutX="377.0" layoutY="466.0" text="Label">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="221.0" layoutY="502.0" prefHeight="20.0" prefWidth="88.0" text="Language: ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="languageText" layoutX="377.0" layoutY="502.0" text="Label">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="192.0" layoutY="538.0" prefHeight="20.0" prefWidth="117.0" text="Book category: ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="bookCatText" layoutX="377.0" layoutY="538.0" text="Label">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
