@@ -25,4 +25,9 @@ public class ResultScreenService extends BaseScreenService {
         resultLabel.setText(result);
         messageLabel.setText(message);
     }
+
+    @FXML
+    void confirmPayment(MouseEvent event) throws IOException {
+        homeScreenService.show();
+    }
 }
