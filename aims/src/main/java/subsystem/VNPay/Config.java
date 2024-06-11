@@ -17,9 +17,8 @@ import java.util.regex.Pattern;
 public class Config {
     public static String vnp_PayUrl = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
     public static String vnp_ReturnUrl = "http://127.0.0.1:50387";
-    public static String vnp_TmnCode = "TXOOZNX4";
-    public static String secretKey = "HUQHTRVXVRGJJWHMBFCAUBAXOSAJBIND";
-    public static String vnp_ApiUrl = "https://sandbox.vnpayment.vn/merchant_webapi/api/transaction";
+    public static String vnp_TmnCode = "5QT3R157";
+    public static String secretKey = "ILSPLQSJSMIIIZROKZBZVUFJYWIALASF";
 
     public static String Sha256(String message) {
         String digest = null;
