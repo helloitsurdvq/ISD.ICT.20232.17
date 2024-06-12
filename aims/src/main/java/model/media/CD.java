@@ -25,36 +25,16 @@ public class CD extends Media {
         return this.artist;
     }
 
-    public CD setArtist(String artist) {
-        this.artist = artist;
-        return this;
-    }
-
     public String getRecordLabel() {
         return this.recordLabel;
-    }
-
-    public CD setRecordLabel(String recordLabel) {
-        this.recordLabel = recordLabel;
-        return this;
     }
 
     public String getMusicType() {
         return this.musicType;
     }
 
-    public CD setMusicType(String musicType) {
-        this.musicType = musicType;
-        return this;
-    }
-
     public Date getReleasedDate() {
         return this.releasedDate;
-    }
-
-    public CD setReleasedDate(Date releasedDate) {
-        this.releasedDate = releasedDate;
-        return this;
     }
 
     @Override

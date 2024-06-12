@@ -11,7 +11,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 public class VNPayController {
-
     public String generatePayOrderUrl(int money, String contents) throws IOException {
         String vnp_Version = "2.1.0";
         String vnp_Command = "pay";

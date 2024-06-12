@@ -31,10 +31,6 @@ public class PaymentTransaction {
         return errorCode;
     }
 
-    public String getTransactionContent() {
-        return transactionContent;
-    }
-
     public void save(int orderId) throws SQLException {
         this.orderID = orderId;
         Statement stm = db.getConnection().createStatement();
@@ -51,12 +47,10 @@ public class PaymentTransaction {
 
     public int checkPaymentByOrderId(int orderId) throws SQLException {
         int count = 0;
-
         String query = "SELECT COUNT(*) FROM PaymentTransaction WHERE orderID = ?";
 
         try (PreparedStatement preparedStatement = db.getConnection().prepareStatement(query)) {
             preparedStatement.setInt(1, orderId);
-
             try (ResultSet resultSet = preparedStatement.executeQuery()) {
                 if (resultSet.next()) {
                     count = resultSet.getInt(1);

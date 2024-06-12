@@ -28,7 +28,6 @@ public class Book extends Media{
         this.bookCategory = bookCategory;
     }
 
-    // getter and setter
     public int getId() {
         return this.id;
     }
@@ -37,27 +36,12 @@ public class Book extends Media{
         return this.author;
     }
 
-    public Book setAuthor(String author) {
-        this.author = author;
-        return this;
-    }
-
     public String getCoverType() {
         return this.coverType;
     }
 
-    public Book setCoverType(String coverType) {
-        this.coverType = coverType;
-        return this;
-    }
-
     public String getPublisher() {
         return this.publisher;
-    }
-
-    public Book setPublisher(String publisher) {
-        this.publisher = publisher;
-        return this;
     }
 
 
@@ -65,36 +49,16 @@ public class Book extends Media{
         return this.publishDate;
     }
 
-    public Book setPublishDate(Date publishDate) {
-        this.publishDate = publishDate;
-        return this;
-    }
-
     public int getNumOfPages() {
         return this.numOfPages;
-    }
-
-    public Book setNumOfPages(int numOfPages) {
-        this.numOfPages = numOfPages;
-        return this;
     }
 
     public String getLanguage() {
         return this.language;
     }
 
-    public Book setLanguage(String language) {
-        this.language = language;
-        return this;
-    }
-
     public String getBookCategory() {
         return this.bookCategory;
-    }
-
-    public Book setBookCategory(String bookCategory) {
-        this.bookCategory = bookCategory;
-        return this;
     }
 
     @Override

@@ -15,13 +15,10 @@ import java.util.logging.Logger;
 
 public class PlaceOrderController extends BaseController {
     // common coupling
-    /**
-     * Just for logging purpose
-     */
     private static Logger LOGGER = utils.Format.getLogger(PlaceOrderController.class.getName());
 
     /**
-     * This method checks the avalibility of product when user click PlaceOrder
+     * This method checks the availability of product when user click PlaceOrder
      */
     public void placeOrder() throws SQLException {
         Cart.getCart().checkAvailabilityOfProduct();
@@ -78,7 +75,6 @@ public class PlaceOrderController extends BaseController {
         } catch (NumberFormatException e) {
             return false;
         }
-
         return true;
     }
 
@@ -95,7 +91,6 @@ public class PlaceOrderController extends BaseController {
         return true;
     }
 
-
     /**
      * This method calculates the shipping fees of order
      */
@@ -106,7 +101,7 @@ public class PlaceOrderController extends BaseController {
     }
 
     /**
-     * This method get product available place rush order media
+     * This method gets product available for place rush order media
      */
     public Media getProductAvailablePlaceRush(Order order) throws SQLException {
         Media media = new Media();

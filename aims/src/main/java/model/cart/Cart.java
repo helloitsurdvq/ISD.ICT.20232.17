@@ -21,10 +21,6 @@ public class Cart {
         return cartInstance;
     }
 
-    public void addCartMedia(CartMedia cm) {
-        lstCartMedia.add(cm);
-    }
-
     public void removeCartMedia(CartMedia cm) {
         lstCartMedia.remove(cm);
     }
@@ -64,7 +60,7 @@ public class Cart {
             int availQuantity = cartMedia.getMedia().getQuantity();
             if (requiredQuantity > availQuantity) allAvai = false;
         }
-        if (!allAvai) throw new NotAvailableMediaException("Some media not available");
+        if (!allAvai) throw new NotAvailableMediaException("Some media is not available");
     }
 
     public CartMedia checkMediaInCart(Media media) {

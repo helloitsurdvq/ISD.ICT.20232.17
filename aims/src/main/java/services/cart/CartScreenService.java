@@ -107,7 +107,7 @@ public class CartScreenService extends BaseScreenService {
             // create placeOrderController and process the order
             var placeOrderController = new PlaceOrderController();
             if (placeOrderController.getListCartMedia().size() == 0) {
-                PopUpScreenService.error("You don't have anything to place");
+                PopUpScreenService.error("Cart is empty!");
                 return;
             }
 

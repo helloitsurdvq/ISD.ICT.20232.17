@@ -7,19 +7,18 @@ import model.cart.CartMedia;
 import java.util.List;
 
 /**
- * This class is the base controller.
+ * The base controller class.
  */
 public class BaseController {
     /**
-     * The method checks whether the Media in Cart, if it were in, we will return
-     * the CartMedia else return null.
+     * If the Media in Cart, this will return the CartMedia else return null.
      */
     public CartMedia checkMediaInCart(Media media) {
         return Cart.getCart().checkMediaInCart(media);
     }
 
     /**
-     * This method gets the list of items in cart.
+     * Gets the item list in cart.
      */
     public List getListCartMedia() {
         return Cart.getCart().getListMedia();

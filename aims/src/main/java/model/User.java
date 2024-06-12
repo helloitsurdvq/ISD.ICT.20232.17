@@ -54,13 +54,8 @@ public class User {
                 "}";
     }
 
-    // getter and setter
     public String getName() {
         return this.name;
-    }
-
-    public void setusername(String name) {
-        this.name = name;
     }
 
     public String getEmail() {

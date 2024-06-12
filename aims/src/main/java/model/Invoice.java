@@ -4,10 +4,6 @@ public class Invoice {
     private Order order;
     private int amount;
 
-    public Invoice() {
-
-    }
-
     public Invoice(Order order) {
         this.order = order;
     }
@@ -22,9 +18,5 @@ public class Invoice {
 
     public void setAmount(int amount) {
         this.amount = amount;
-    }
-
-    public void saveInvoice() {
-
     }
 }

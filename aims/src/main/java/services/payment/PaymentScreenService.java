@@ -31,12 +31,11 @@ public class PaymentScreenService extends BaseScreenService {
         this.invoice = invoice;
 
         displayWebView();
-
     }
 
     private void displayWebView(){
         var paymentController = new PaymentController();
-        var paymentUrl = paymentController.getUrlPay(invoice.getAmount(), "Thanh toan hoa don AIMS");
+        var paymentUrl = paymentController.getUrlPay(invoice.getAmount(), "AIMS purchasing");
         WebView paymentView = new WebView();
         WebEngine webEngine = paymentView.getEngine();
         webEngine.load(paymentUrl);

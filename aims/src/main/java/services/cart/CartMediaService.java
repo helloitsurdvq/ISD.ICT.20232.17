@@ -89,9 +89,9 @@ public class CartMediaService extends FXMLScreenService {
         spinner.setOnMouseClicked(e -> {
             int numOfProd = this.spinner.getValue();
             int remainQuantity = cartMedia.getMedia().getQuantity();
-            LOGGER.info("NumOfProd: " + numOfProd + " -- remainOfProd: " + remainQuantity);
+            LOGGER.info("Product quantity: " + numOfProd + " -- Product remaining: " + remainQuantity);
             if (numOfProd > remainQuantity) {
-                LOGGER.info("product " + cartMedia.getMedia().getTitle() + " only remains " + remainQuantity + " (required " + numOfProd + ")");
+                LOGGER.info("Product " + cartMedia.getMedia().getTitle() + " only remains " + remainQuantity + " (required " + numOfProd + ")");
                 labelOutOfStock.setText("Sorry, Only " + remainQuantity + " remain in stock");
                 spinner.getValueFactory().setValue(remainQuantity);
                 numOfProd = remainQuantity;

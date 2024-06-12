@@ -11,10 +11,6 @@ public class Shipment {
         return shipType;
     }
 
-    public void setShipType(int shipType) {
-        this.shipType = shipType;
-    }
-
     public void setDeliveryInstruction(String deliveryInstruction) {
         this.deliveryInstruction = deliveryInstruction;
     }

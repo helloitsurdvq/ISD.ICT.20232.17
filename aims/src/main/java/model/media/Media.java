@@ -149,7 +149,6 @@ public class Media {
         stm.executeUpdate();
     }
 
-    // getter and setter
     public int getId() {
         return this.id;
     }

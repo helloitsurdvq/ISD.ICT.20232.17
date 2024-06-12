@@ -1,11 +1,9 @@
 package controller;
 
 import exception.LoginException;
-import database.db;
 import model.User;
 import utils.Format;
 
-import java.time.LocalDateTime;
 import java.util.Objects;
 import java.util.logging.Logger;
 

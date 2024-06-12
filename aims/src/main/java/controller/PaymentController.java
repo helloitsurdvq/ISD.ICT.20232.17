@@ -11,12 +11,12 @@ import java.util.Hashtable;
 import java.util.Map;
 
 /**
- * This {@code PaymentController} class control the flow of the payment process
- * in our AIMS Software.
+ * This {@code PaymentController} class controls the flow of the payment process
+ * in AIMS.
  */
 public class PaymentController extends BaseController {
     /**
-     * Represent the Interbank subsystem
+     * Represent the VNPay subsystem
      */
     private VNPayInterface VNPayService;
     public Map<String, String> makePayment(Map<String, String> res, int orderId) {
@@ -27,7 +27,7 @@ public class PaymentController extends BaseController {
             var trans = VNPayService.makePaymentTransaction(res);
             trans.save(orderId);
             result.put("RESULT", "PAYMENT SUCCESSFUL!");
-            result.put("MESSAGE", "You have succesffully paid the order!");
+            result.put("MESSAGE", "You have successfully purchase the order!");
         } catch (PaymentException | UnrecognizedException | SQLException ex) {
             result.put("MESSAGE", ex.getMessage());
             result.put("RESULT", "PAYMENT FAILED!");

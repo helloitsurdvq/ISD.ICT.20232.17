@@ -134,19 +134,6 @@ public class HomeScreenService extends BaseScreenService implements Initializabl
         addMenuItem(0, "Book", splitMenuBtnSearch);
         addMenuItem(1, "DVD", splitMenuBtnSearch);
         addMenuItem(2, "CD", splitMenuBtnSearch);
-
-        aimsImage.addEventHandler(MouseEvent.MOUSE_CLICKED, e -> {
-            MediaManageScreenService mediaManageScreen;
-            try {
-                LOGGER.info("User views manage button");
-                mediaManageScreen = new MediaManageScreenService(this.stage, Configs.MEDIA_MANAGE_SCREEN_PATH);
-                mediaManageScreen.setHomeScreenHandler(this);
-                mediaManageScreen.setBController(new MediaController());
-                mediaManageScreen.show();
-            } catch (IOException ex) {
-                throw new RuntimeException(ex);
-            }
-        });
     }
 
     public void setImage() {

@@ -81,14 +81,6 @@ public class OrderManageScreenService extends ManageScreenService implements Ini
     public void showAllOrder() throws SQLException {
         List<Order> listOrder = getBController().getAllOrder();
 
-        // Log shipType for all shipments
-//        listOrder.forEach(order -> {
-//            Shipment shipment = order.getShipment();
-//            if (shipment != null) {
-//                LOGGER.info("ShipType for Order ID " + order.getId() + ": " + shipment.getShipType());
-//            }
-//        });
-
         idColumn.setCellValueFactory(new PropertyValueFactory<Order, Integer>("id"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<Order, String>("name"));
         phoneColumn.setCellValueFactory(new PropertyValueFactory<Order, String>("phone"));
@@ -99,10 +91,6 @@ public class OrderManageScreenService extends ManageScreenService implements Ini
             Order order = cellData.getValue();
             Shipment shipment = order.getShipment();
             String shipType = shipment.getShipType() == 1 ? "Rush Delivery" : "Standard Delivery";
-
-            // Log shipType
-//            LOGGER.info("ShipType for Order ID " + order.getId() + ": " + shipType);
-
             return new ReadOnlyObjectWrapper<>(shipType);
         });
         statusColumn.setCellValueFactory(new PropertyValueFactory<Order, String>("status"));
@@ -116,7 +104,6 @@ public class OrderManageScreenService extends ManageScreenService implements Ini
                     setTextFill(null); // Set default text color if status is null or empty
                 } else {
                     setText(status);
-
                     // Set text color based on the status value
                     if ("Approve".equals(status)) {
                         setTextFill(javafx.scene.paint.Color.GREEN);

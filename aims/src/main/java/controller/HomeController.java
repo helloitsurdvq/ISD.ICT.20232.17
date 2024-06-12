@@ -7,7 +7,7 @@ import java.util.List;
 
 public class HomeController extends BaseController {
     /**
-     * this method gets all Media in database and return back to home to display
+     * Gets all Media in database and return to home for display
      */
     public List getAllMedia() throws SQLException {
         return new Media().getAllMedia();

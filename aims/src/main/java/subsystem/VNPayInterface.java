@@ -8,10 +8,8 @@ import java.text.ParseException;
 import java.util.Map;
 
 /**
- * The {@code InterbankInterface} class is used to communicate with the
- * {@link VNPaySubsystem InterbankSubsystem} to make transaction.
- *
- * @author quang
+ * The {@code VNPayInterface} class is used to communicate with the
+ * {@link VNPaySubsystem VNPaySubsystem} to make transaction.
  */
 
 public interface VNPayInterface {

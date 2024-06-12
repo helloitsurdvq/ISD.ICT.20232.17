@@ -14,26 +14,7 @@ import java.util.Set;
 import java.util.logging.Logger;
 
 public class AppInterface {
-    public static DateFormat DATE_FORMATER = new SimpleDateFormat("yyyyMMddHHmmss");
     private static Logger LOGGER = Format.getLogger(Format.class.getName());
-
-    /**
-     * Get methods.
-     */
-    public static String get(String url, String token) throws Exception {
-        LOGGER.info("Request URL: " + url + "\n");
-        HttpURLConnection conn = generateConnection(url, "Get", token);
-        BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-        String inputLine;
-        StringBuilder respone = new StringBuilder();
-        while ((inputLine = in.readLine()) != null) {
-            System.out.println(inputLine);
-        }
-        respone.append(inputLine + "\n");
-        in.close();
-        LOGGER.info("Respone Info: " + respone.substring(0, respone.length() - 1).toString());
-        return respone.substring(0, respone.length() - 1).toString();
-    }
 
     private static HttpURLConnection generateConnection(String url, String requestMethod, String token) throws IOException {
         final var conn = (HttpURLConnection) extracted(url).openConnection();
