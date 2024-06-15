@@ -14,7 +14,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <HBox prefHeight="104.0" prefWidth="1326.0" style="-fx-background-color: #ccebff; -fx-border-color: #33adff;">
+        <HBox prefHeight="104.0" prefWidth="1366.0" style="-fx-background-color: #ccebff; -fx-border-color: #33adff;">
             <children>
                 <VBox prefHeight="102.0" prefWidth="231.0">
                     <children>
@@ -34,7 +34,7 @@
                         </Pane>
                     </children>
                 </VBox>
-                <HBox prefHeight="102.0" prefWidth="882.0">
+                <HBox prefHeight="102.0" prefWidth="867.0">
                     <children>
                         <Pane prefHeight="102.0" prefWidth="562.0">
                             <children>
@@ -69,26 +69,23 @@
                                     </image>
                                 </ImageView>
                                 <Label fx:id="numMediaInCart" layoutX="24.0" layoutY="11.0" prefHeight="16.0" prefWidth="64.0" text="0 media" textFill="#5091e6" />
+                                <Button fx:id="loginBtn" layoutX="98.0" layoutY="22.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="124.0" style="-fx-cursor: hand; -fx-background-color: #0080ff;" text="Login" textFill="#fcf8f8">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Button>
                             </children>
                         </Pane>
                     </children>
                 </VBox>
                 <VBox prefHeight="200.0" prefWidth="100.0">
                     <children>
-                        <AnchorPane prefHeight="102.0" prefWidth="110.0">
-                            <children>
-                                <Button fx:id="loginBtn" layoutX="-56.0" layoutY="26.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="124.0" style="-fx-cursor: hand; -fx-background-color: #0080ff;" text="Login" textFill="#fcf8f8">
-                                    <font>
-                                        <Font size="24.0" />
-                                    </font>
-                                </Button>
-                            </children>
-                        </AnchorPane>
+                        <AnchorPane prefHeight="102.0" prefWidth="110.0" />
                     </children>
                 </VBox>
             </children>
         </HBox>
-        <HBox fx:id="hboxMedia" layoutX="24.0" layoutY="123.0" prefHeight="629.0" prefWidth="1283.0">
+        <HBox fx:id="hboxMedia" layoutX="41.0" layoutY="124.0" prefHeight="629.0" prefWidth="1283.0">
             <children>
                 <VBox fx:id="vboxMedia1" prefHeight="629.0" prefWidth="321.0" style="-fx-border-color: #33adff;" />
                 <VBox fx:id="vboxMedia2" prefHeight="629.0" prefWidth="320.0" style="-fx-border-color: #33adff;" />

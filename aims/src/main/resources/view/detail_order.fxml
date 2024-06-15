@@ -50,7 +50,7 @@
                <children>
                   <AnchorPane prefHeight="790.0" prefWidth="1098.0">
                      <children>
-                        <Label layoutX="414.0" layoutY="34.0" prefHeight="35.0" prefWidth="270.0" text="Detail Order Information">
+                        <Label layoutX="481.0" layoutY="38.0" prefHeight="35.0" prefWidth="200.0" text="Order Information">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -64,7 +64,7 @@
                               </Label>
                               <Label layoutX="21.0" layoutY="53.0" prefHeight="20.0" prefWidth="47.0" text="Name: ">
                                  <font>
-                                    <Font size="14.0" />
+                                    <Font name="System Italic" size="14.0" />
                                  </font>
                               </Label>
                               <Label fx:id="customerName" layoutX="88.0" layoutY="53.0" text="....">
@@ -74,7 +74,7 @@
                               </Label>
                               <Label layoutX="21.0" layoutY="89.0" prefHeight="20.0" prefWidth="47.0" text="Phone: ">
                                  <font>
-                                    <Font size="14.0" />
+                                    <Font name="System Italic" size="14.0" />
                                  </font>
                               </Label>
                               <Label fx:id="customerPhone" layoutX="88.0" layoutY="89.0" text="....">
@@ -84,7 +84,7 @@
                               </Label>
                               <Label layoutX="296.0" layoutY="53.0" prefHeight="20.0" prefWidth="64.0" text="Address: ">
                                  <font>
-                                    <Font size="14.0" />
+                                    <Font name="System Italic" size="14.0" />
                                  </font>
                               </Label>
                               <Label fx:id="customerAddress" layoutX="380.0" layoutY="53.0" text="....">
@@ -94,7 +94,7 @@
                               </Label>
                               <Label layoutX="292.0" layoutY="89.0" prefHeight="20.0" prefWidth="70.0" text="Province: ">
                                  <font>
-                                    <Font size="14.0" />
+                                    <Font name="System Italic" size="14.0" />
                                  </font>
                               </Label>
                               <Label fx:id="customerProvince" layoutX="382.0" layoutY="89.0" text="....">
@@ -113,7 +113,7 @@
                               </Label>
                               <Label layoutX="20.0" layoutY="53.0" prefHeight="20.0" prefWidth="99.0" text="Ship Type: ">
                                  <font>
-                                    <Font size="14.0" />
+                                    <Font name="System Italic" size="14.0" />
                                  </font>
                               </Label>
                               <Label fx:id="deliveryShipType" layoutX="135.0" layoutY="53.0" text="....">
@@ -123,7 +123,7 @@
                               </Label>
                               <Label layoutX="20.0" layoutY="87.0" prefHeight="20.0" prefWidth="99.0" text="Delivery Date: ">
                                  <font>
-                                    <Font size="14.0" />
+                                    <Font name="System Italic" size="14.0" />
                                  </font>
                               </Label>
                               <Label fx:id="deliveryDate" layoutX="135.0" layoutY="87.0" text="....">
@@ -133,7 +133,7 @@
                               </Label>
                               <Label layoutX="293.0" layoutY="87.0" prefHeight="20.0" prefWidth="130.0" text="Delivery Instruction: ">
                                  <font>
-                                    <Font size="14.0" />
+                                    <Font name="System Italic" size="14.0" />
                                  </font>
                               </Label>
                               <Label fx:id="deliveryInstruction" layoutX="439.0" layoutY="87.0" text="....">
@@ -162,7 +162,7 @@
                               </TableView>
                               <Label layoutX="20.0" layoutY="251.0" prefHeight="20.0" prefWidth="121.0" text="Total Price (VAT): ">
                                  <font>
-                                    <Font size="14.0" />
+                                    <Font name="System Italic" size="14.0" />
                                  </font>
                               </Label>
                               <Label fx:id="totalPrice" layoutX="167.0" layoutY="251.0" text="....">
@@ -172,7 +172,7 @@
                               </Label>
                               <Label layoutX="20.0" layoutY="287.0" prefHeight="20.0" prefWidth="121.0" text="Shipping Fee: ">
                                  <font>
-                                    <Font size="14.0" />
+                                    <Font name="System Italic" size="14.0" />
                                  </font>
                               </Label>
                               <Label fx:id="shippingFee" layoutX="167.0" layoutY="287.0" text="....">
@@ -180,19 +180,19 @@
                                     <Font size="14.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="20.0" layoutY="328.0" prefHeight="20.0" prefWidth="121.0" text="Total Money: ">
+                              <Label layoutX="20.0" layoutY="326.0" prefHeight="20.0" prefWidth="121.0" text="Total Cost: ">
                                  <font>
-                                    <Font size="14.0" />
+                                    <Font name="System Italic" size="14.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="totalMoney" layoutX="167.0" layoutY="328.0" text="....">
+                              <Label fx:id="totalMoney" layoutX="167.0" layoutY="326.0" text="....">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Label>
                               <Label layoutX="297.0" layoutY="251.0" prefHeight="20.0" prefWidth="106.0" text="Order Status: ">
                                  <font>
-                                    <Font size="14.0" />
+                                    <Font name="System Italic" size="14.0" />
                                  </font>
                               </Label>
                               <Label fx:id="orderStatus" layoutX="419.0" layoutY="251.0" text="...." textFill="#ff961e">
@@ -202,7 +202,7 @@
                               </Label>
                               <Label layoutX="297.0" layoutY="287.0" prefHeight="20.0" prefWidth="106.0" text="Payment Status: ">
                                  <font>
-                                    <Font size="14.0" />
+                                    <Font name="System Italic" size="14.0" />
                                  </font>
                               </Label>
                               <Label fx:id="paymentStatus" layoutX="419.0" layoutY="287.0" text="...." textFill="#ff961e">

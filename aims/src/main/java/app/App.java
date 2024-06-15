@@ -5,8 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.animation.FadeTransition;
-import javafx.fxml.FXML;
-import javafx.scene.image.ImageView;
+import javafx.scene.image.Image;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
 import utils.Configs;
@@ -16,13 +15,17 @@ import java.io.IOException;
 
 public class App extends Application {
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage stage) {
         try {
             StackPane root = (StackPane) FXMLLoader.load(getClass().getResource(Configs.SPLASH_SCREEN_PATH));
 
             Scene scene = new Scene(root);
-            primaryStage.setScene(scene);
-            primaryStage.show();
+            stage.setScene(scene);
+            final String appName = "AIMS";
+            stage.setTitle(appName);
+            Image icon = new Image(getClass().getResourceAsStream("/assets/aims_cover_image.png"));
+            stage.getIcons().add(icon);
+            stage.show();
 
             FadeTransition fadeIn = new FadeTransition(Duration.seconds(1), root);
             fadeIn.setFromValue(0);
@@ -41,7 +44,7 @@ public class App extends Application {
 
             fadeOut.setOnFinished((e) -> {
                 try {
-                    HomeScreenService homeHandler = new HomeScreenService(primaryStage, Configs.HOME_PATH);
+                    HomeScreenService homeHandler = new HomeScreenService(stage, Configs.HOME_PATH);
                     homeHandler.setScreenTitle("Home Screen");
                     homeHandler.setImage();
                     homeHandler.show();

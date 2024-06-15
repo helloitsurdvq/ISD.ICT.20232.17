@@ -36,7 +36,7 @@
                                 <Insets />
                             </VBox.margin>
                         </Label>
-                        <Button fx:id="btnDelete" mnemonicParsing="false" prefHeight="45.0" prefWidth="166.0" text="Delete">
+                        <Button fx:id="btnDelete" mnemonicParsing="false" prefHeight="45.0" prefWidth="166.0" style="-fx-background-color: #dc6c6c; -fx-cursor: hand;" text="Delete" textFill="#f2e6e6">
                             <font>
                                 <Font size="16.0" />
                             </font>

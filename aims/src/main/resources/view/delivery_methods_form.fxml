@@ -41,7 +41,7 @@
                         <Image url="@../assets/Logo.png" />
                     </image>
                 </ImageView>
-                <Text layoutX="112.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AIMS DELIVERY METHOD FORM">
+                <Text layoutX="112.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DELIVERY METHOD FORM">
                     <font>
                         <Font name="System Bold" size="24.0" />
                     </font>
@@ -62,7 +62,7 @@
                                 <Font name="System Italic" size="24.0" />
                             </font>
                         </Text>
-                        <RadioButton fx:id="placeRushOrderValue" layoutX="126.0" layoutY="78.0" mnemonicParsing="false" onAction="#handleDeliveryType" style="-fx-cursor: hand;" text="Fast delivery">
+                        <RadioButton fx:id="placeRushOrderValue" layoutX="126.0" layoutY="78.0" mnemonicParsing="false" onAction="#handleDeliveryType" style="-fx-cursor: hand;" text="Rush delivery">
                             <font>
                                 <Font size="18.0" />
                             </font>
@@ -123,7 +123,7 @@
                                 <DatePicker fx:id="deliveryTime" layoutX="330.0" layoutY="34.0" />
                             </children>
                         </AnchorPane>
-                        <Label fx:id="errorProvince" layoutX="233.0" layoutY="305.0" text="Place Rush Order function is only supported for Ha Noi" textFill="#d10808">
+                        <Label fx:id="errorProvince" layoutX="254.0" layoutY="303.0" text="Place Rush Order feature is only supported for Ha Noi" textFill="#d10808">
                             <font>
                                 <Font size="18.0" />
                             </font>
