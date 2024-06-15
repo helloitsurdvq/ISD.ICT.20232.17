@@ -20,6 +20,7 @@ An Internet Media Store - ITSS Software Developemt capstone project.
 ## Project organization
 
 - `aims`: official AIMS project source code.
+- `documents`: requirement analysis, architectural and detailed design, unit test documents for the project
 - `README.md`: weekly report file, individuals are required to update their tasks and how their do it into this file
 
 ### Setup
