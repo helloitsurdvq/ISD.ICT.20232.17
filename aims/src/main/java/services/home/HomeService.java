@@ -42,6 +42,7 @@ public class HomeService extends FXMLScreenService {
         super(screenPath);
         this.media = media;
         this.home = home;
+
         addToCartBtn.setOnMouseClicked(event -> {
             try {
                 if (spinnerChangeNumber.getValue() > media.getQuantity()) throw new NotAvailableMediaException();
@@ -49,7 +50,7 @@ public class HomeService extends FXMLScreenService {
                 // if media already in cart then we will increase the quantity by 1 instead of create the new cartMedia
                 CartMedia mediaInCart = home.getBController().checkMediaInCart(media);
                 if (mediaInCart != null) {
-                    mediaInCart.setQuantity(mediaInCart.getQuantity() + 1);
+                    mediaInCart.setQuantity(mediaInCart.getQuantity() + spinnerChangeNumber.getValue());
                 } else {
                     CartMedia cartMedia = new CartMedia(media, cart, spinnerChangeNumber.getValue(), media.getPrice());
                     cart.getListMedia().add(cartMedia);
@@ -93,7 +94,7 @@ public class HomeService extends FXMLScreenService {
         mediaPrice.setText(Format.getCurrencyFormat(media.getPrice()));
         mediaAvail.setText(Integer.toString(media.getQuantity()));
         spinnerChangeNumber.setValueFactory(
-                new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 1)
+                new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 1000, 1)
         );
         setImage(mediaImage, media.getImageURL());
     }
