@@ -68,6 +68,7 @@ public class HomeScreenService extends BaseScreenService implements Initializabl
     private TextField SearchField;
 
     private List homeItems;
+    private List searchItems;
 
     public HomeScreenService(Stage stage, String screenPath) throws IOException {
         super(stage, screenPath);
@@ -140,17 +141,17 @@ public class HomeScreenService extends BaseScreenService implements Initializabl
 
         // Search engine
         splitMenuBtnSearch.setOnMouseClicked(event -> {
-            String target_item_name = SearchField.getText();
+            String target_item_name = SearchField.getText().strip().toLowerCase();
             setBController(new HomeController());
             if (target_item_name.isEmpty()){
                 setBController(new HomeController());
                 try {
                     List medium = getBController().getAllMedia();
-                    this.homeItems = new ArrayList<>();
+                    this.searchItems = new ArrayList<>();
                     for (Object object : medium) {
                         Media media = (Media) object;
                         HomeService m1 = new HomeService(Configs.HOME_MEDIA_PATH, media, this);
-                        this.homeItems.add(m1);
+                        this.searchItems.add(m1);
                     }
                 } catch (SQLException | IOException e) {
                     LOGGER.info("Errors occured: " + e.getMessage());
@@ -160,12 +161,12 @@ public class HomeScreenService extends BaseScreenService implements Initializabl
             else {
                 try {
                     List all_media = getBController().getAllMedia();
-                    this.homeItems = new ArrayList<>();
+                    this.searchItems = new ArrayList<>();
                     for (Object object : all_media) {
                         Media media = (Media) object;
-                        if (media.getTitle().equals(target_item_name)){
+                        if (media.getTitle().toLowerCase().equals(target_item_name)){
                             HomeService m1 = new HomeService(Configs.HOME_MEDIA_PATH, media, this);
-                            this.homeItems.add(m1);
+                            this.searchItems.add(m1);
                         }
                     }
                 } catch (SQLException | IOException e) {
@@ -173,7 +174,7 @@ public class HomeScreenService extends BaseScreenService implements Initializabl
                     e.printStackTrace();
                 }
             }
-            addMediaHome(this.homeItems);
+            addMediaHome(this.searchItems);
         });
     }
 
