@@ -64,6 +64,9 @@ public class HomeScreenService extends BaseScreenService implements Initializabl
     @FXML
     private SplitMenuButton splitMenuBtnSearch;
 
+    @FXML
+    private TextField SearchField;
+
     private List homeItems;
 
     public HomeScreenService(Stage stage, String screenPath) throws IOException {
@@ -134,6 +137,44 @@ public class HomeScreenService extends BaseScreenService implements Initializabl
         addMenuItem(0, "Book", splitMenuBtnSearch);
         addMenuItem(1, "DVD", splitMenuBtnSearch);
         addMenuItem(2, "CD", splitMenuBtnSearch);
+
+        // Search engine
+        splitMenuBtnSearch.setOnMouseClicked(event -> {
+            String target_item_name = SearchField.getText();
+            setBController(new HomeController());
+            if (target_item_name.isEmpty()){
+                setBController(new HomeController());
+                try {
+                    List medium = getBController().getAllMedia();
+                    this.homeItems = new ArrayList<>();
+                    for (Object object : medium) {
+                        Media media = (Media) object;
+                        HomeService m1 = new HomeService(Configs.HOME_MEDIA_PATH, media, this);
+                        this.homeItems.add(m1);
+                    }
+                } catch (SQLException | IOException e) {
+                    LOGGER.info("Errors occured: " + e.getMessage());
+                    e.printStackTrace();
+                }
+            }
+            else {
+                try {
+                    List all_media = getBController().getAllMedia();
+                    this.homeItems = new ArrayList<>();
+                    for (Object object : all_media) {
+                        Media media = (Media) object;
+                        if (media.getTitle().equals(target_item_name)){
+                            HomeService m1 = new HomeService(Configs.HOME_MEDIA_PATH, media, this);
+                            this.homeItems.add(m1);
+                        }
+                    }
+                } catch (SQLException | IOException e) {
+                    LOGGER.info("Errors occured: " + e.getMessage());
+                    e.printStackTrace();
+                }
+            }
+            addMediaHome(this.homeItems);
+        });
     }
 
     public void setImage() {
