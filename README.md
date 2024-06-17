@@ -32,4 +32,4 @@ An Internet Media Store - ITSS Software Developemt capstone project.
 
    git clone https://github.com/helloitsurdvq/ISD.ICT.20232-17.git
 
-3. Run the application in the main Class [App.java](/app/App.java).
+3. Run the application in the main Class [App.java](aims/src/main/java/app/App.java).
