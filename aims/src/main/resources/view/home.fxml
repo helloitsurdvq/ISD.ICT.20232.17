@@ -56,6 +56,15 @@
                                 </SplitMenuButton>
                             </children>
                         </Pane>
+                        <Pane prefHeight="102.0" prefWidth="158.0">
+                            <children>
+                                <Button fx:id="BtnSort" layoutY="27.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="124.0" text="Sort">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </Pane>
 <!--                        <Button fx:id="manageButton" mnemonicParsing="false" text="Manage"/>-->
                     </children>
                 </HBox>

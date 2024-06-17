@@ -67,6 +67,9 @@ public class HomeScreenService extends BaseScreenService implements Initializabl
     @FXML
     private TextField SearchField;
 
+    @FXML
+    private Button BtnSort;
+
     private List homeItems;
     private List searchItems;
 
@@ -105,6 +108,8 @@ public class HomeScreenService extends BaseScreenService implements Initializabl
         }
 
         aimsImage.setOnMouseClicked(e -> {
+            SearchField.setText("");
+            this.searchItems = null;
             addMediaHome(this.homeItems);
         });
 
@@ -175,6 +180,19 @@ public class HomeScreenService extends BaseScreenService implements Initializabl
                 }
             }
             addMediaHome(this.searchItems);
+        });
+
+        // Sort product price
+        BtnSort.setOnMouseClicked(event -> {
+            List sortItems;
+            if (this.searchItems == null){
+                sortItems = new ArrayList<>(this.homeItems);
+            }
+            else {
+                sortItems = new ArrayList<>(this.searchItems);
+            }
+            sortItems.sort(new SortProductComparator());
+            addMediaHome(sortItems);
         });
     }
 
