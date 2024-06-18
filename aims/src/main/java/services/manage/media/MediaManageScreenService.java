@@ -129,6 +129,10 @@ public class MediaManageScreenService extends ManageScreenService implements Ini
                 }
 
                 HBox buttonsHBox = new HBox(editButton, deleteButton, viewButton);
+                buttonsHBox.setSpacing(5);
+                editButton.setStyle("-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-cursor: hand");
+                deleteButton.setStyle("-fx-background-color: #f44336; -fx-text-fill: white; -fx-cursor: hand");
+                viewButton.setStyle("-fx-background-color: #2196F3; -fx-text-fill: white; -fx-cursor: hand");
 
                 switch (media.getType()) {
                     case BOOK: {

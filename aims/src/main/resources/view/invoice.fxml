@@ -40,7 +40,7 @@
             <children>
                 <Label text="Subtotal">
                     <font>
-                        <Font name="Segoe UI" size="24.0" />
+                        <Font name="Arial" size="24.0" />
                     </font>
                     <padding>
                         <Insets left="10.0" />
@@ -48,7 +48,7 @@
                 </Label>
                 <Label text="Shipping Fees" GridPane.rowIndex="1">
                     <font>
-                        <Font name="Segoe UI" size="24.0" />
+                        <Font name="Arial" size="24.0" />
                     </font>
                     <GridPane.margin>
                         <Insets left="10.0" />
@@ -56,7 +56,7 @@
                 </Label>
                 <Label text="Total" GridPane.rowIndex="2">
                     <font>
-                        <Font name="Segoe UI" size="24.0" />
+                        <Font name="Arial Bold" size="24.0" />
                     </font>
                     <GridPane.margin>
                         <Insets left="10.0" />
@@ -64,17 +64,17 @@
                 </Label>
                 <Label fx:id="subtotal" alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="500.0" text="100,000 vnđ" GridPane.columnIndex="1">
                     <font>
-                        <Font name="Segoe UI" size="24.0" />
+                        <Font name="Arial" size="24.0" />
                     </font>
                 </Label>
                 <Label fx:id="shippingFees" alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="500.0" text="50,000 vnđ" textFill="SPRINGGREEN" GridPane.columnIndex="1" GridPane.rowIndex="1">
                     <font>
-                        <Font name="Segoe UI" size="24.0" />
+                        <Font name="Arial" size="24.0" />
                     </font>
                 </Label>
                 <Label fx:id="total" alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="500.0" text="150,000 vnđ" textFill="#ff0009" GridPane.columnIndex="1" GridPane.rowIndex="2">
                     <font>
-                        <Font name="Segoe UI Bold" size="24.0" />
+                        <Font name="Arial Bold" size="24.0" />
                     </font>
                 </Label>
             </children>
@@ -94,7 +94,7 @@
             <children>
                 <Label text="Name">
                     <font>
-                        <Font name="System Bold Italic" size="24.0" />
+                        <Font name="Arial Bold Italic" size="24.0" />
                     </font>
                     <padding>
                         <Insets left="10.0" />
@@ -102,7 +102,7 @@
                 </Label>
                 <Label text="Phone" GridPane.rowIndex="1">
                     <font>
-                        <Font name="System Bold Italic" size="24.0" />
+                        <Font name="Arial Bold Italic" size="24.0" />
                     </font>
                     <GridPane.margin>
                         <Insets left="10.0" />
@@ -110,7 +110,7 @@
                 </Label>
                 <Label prefHeight="30.0" prefWidth="204.0" text="City" GridPane.rowIndex="2">
                     <font>
-                        <Font name="System Bold Italic" size="24.0" />
+                        <Font name="Arial Bold Italic" size="24.0" />
                     </font>
                     <GridPane.margin>
                         <Insets left="10.0" />
@@ -118,7 +118,7 @@
                 </Label>
                 <Label text="Address" GridPane.rowIndex="3">
                     <font>
-                        <Font name="System Bold Italic" size="24.0" />
+                        <Font name="Arial Bold Italic" size="24.0" />
                     </font>
                     <GridPane.margin>
                         <Insets left="10.0" />
@@ -126,7 +126,7 @@
                 </Label>
                 <Label text="Shipping&#10;Instructions" GridPane.rowIndex="4">
                     <font>
-                        <Font name="System Bold Italic" size="24.0" />
+                        <Font name="Arial Bold Italic" size="24.0" />
                     </font>
                     <GridPane.margin>
                         <Insets left="10.0" />
@@ -134,27 +134,27 @@
                 </Label>
                 <Label fx:id="name" prefHeight="33.0" prefWidth="472.0" text="Full name" GridPane.columnIndex="1">
                     <font>
-                        <Font name="Segoe UI" size="24.0" />
+                        <Font name="Arial" size="24.0" />
                     </font>
                 </Label>
                 <Label fx:id="phone" prefHeight="31.0" prefWidth="466.0" text="0987654321" GridPane.columnIndex="1" GridPane.rowIndex="1">
                     <font>
-                        <Font name="Segoe UI" size="24.0" />
+                        <Font name="Arial" size="24.0" />
                     </font>
                 </Label>
                 <Label fx:id="province" prefHeight="34.0" prefWidth="475.0" text="Hanoi" GridPane.columnIndex="1" GridPane.rowIndex="2">
                     <font>
-                        <Font name="Segoe UI" size="24.0" />
+                        <Font name="Arial" size="24.0" />
                     </font>
                 </Label>
                 <Label fx:id="address" prefHeight="38.0" prefWidth="467.0" text="Address" GridPane.columnIndex="1" GridPane.rowIndex="3">
                     <font>
-                        <Font name="Segoe UI" size="24.0" />
+                        <Font name="Arial" size="24.0" />
                     </font>
                 </Label>
                 <Label fx:id="instructions" prefHeight="94.0" prefWidth="479.0" text="Shipping Instructions" GridPane.columnIndex="1" GridPane.rowIndex="4">
                     <font>
-                        <Font name="Segoe UI" size="24.0" />
+                        <Font name="Arial" size="24.0" />
                     </font>
                 </Label>
             </children>
@@ -166,7 +166,7 @@
         </ScrollPane>
         <Button alignment="CENTER" contentDisplay="CENTER" layoutX="540.0" layoutY="690.0" mnemonicParsing="false" onMouseClicked="#confirmInvoice" prefHeight="46.0" prefWidth="316.0" style="-fx-background-color: #ff0000; -fx-cursor: hand;" text="Confirm order" textFill="WHITE">
             <font>
-                <Font name="Segoe UI Bold" size="24.0" />
+                <Font name="Arial Bold" size="24.0" />
             </font>
         </Button>
     </children>

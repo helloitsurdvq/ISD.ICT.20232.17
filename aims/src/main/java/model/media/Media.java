@@ -12,9 +12,6 @@ import java.util.List;
 import java.util.Random;
 import java.util.logging.Logger;
 
-/**
- * The general media class, for another media it can be done by inheriting this class
- */
 public class Media {
     protected static boolean isSupportedPlaceRushOrder = new Random().nextBoolean();
     private static Logger LOGGER = Format.getLogger(Media.class.getName());

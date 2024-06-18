@@ -13,7 +13,7 @@
 
 <AnchorPane prefHeight="211.0" prefWidth="298.0" style="-fx-border-color: #ccd9ff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <ImageView fx:id="mediaImage" fitHeight="152.0" fitWidth="160.0" layoutX="14.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fx:id="mediaImage" fitHeight="152.0" fitWidth="160.0" layoutX="14.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-color: #1111cc;">
             <image>
                 <Image url="@../assets/book/book1.jpg" />
             </image>
@@ -24,12 +24,12 @@
                     <children>
                         <Label fx:id="mediaTitle" alignment="CENTER" prefHeight="45.0" prefWidth="110.0" text="  Title" textAlignment="CENTER" wrapText="true">
                             <font>
-                                <Font name="System Bold" size="21.0" />
+                                <Font name="Arial Bold" size="16.0" />
                             </font>
                         </Label>
                     </children>
                 </VBox>
-                <VBox layoutY="39.0" prefHeight="170.0" prefWidth="110.0" style="-fx-border-color: #80ff80;">
+                <VBox layoutY="39.0" prefHeight="170.0" prefWidth="110.0" style="-fx-border-color: #1111cc;">
                     <children>
                         <HBox alignment="CENTER" prefHeight="32.0" prefWidth="106.0">
                             <children>
@@ -37,7 +37,7 @@
                                     <children>
                                         <Label alignment="CENTER" layoutX="4.0" layoutY="10.0" prefHeight="16.0" prefWidth="51.0" text="Price">
                                             <font>
-                                                <Font name="System Bold Italic" size="13.0" />
+                                                <Font name="Arial Bold Italic" size="13.0" />
                                             </font>
                                         </Label>
                                     </children>
@@ -55,7 +55,7 @@
                                     <children>
                                         <Label alignment="CENTER" layoutX="5.0" layoutY="6.0" prefHeight="16.0" prefWidth="51.0" text="Remain">
                                             <font>
-                                                <Font name="System Bold Italic" size="13.0" />
+                                                <Font name="Arial Bold Italic" size="13.0" />
                                             </font>
                                         </Label>
                                     </children>
@@ -74,7 +74,10 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="72.0" prefWidth="106.0">
                             <children>
-                                <Button fx:id="addToCartBtn" alignment="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" style="-fx-cursor: hand;" text="Add to Cart" />
+                                <Button fx:id="addToCartBtn" alignment="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" style="-fx-cursor: hand;" text="Add to Cart">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font></Button>
                             </children>
                         </HBox>
                     </children>

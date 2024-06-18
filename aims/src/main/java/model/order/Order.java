@@ -154,7 +154,6 @@ public class Order {
             order.setShippingFees(res.getInt("shipping_fee"));
             order.setStatus(res.getString("status"));
 
-            // Create a Shipment object and set its properties
             Shipment shipment = new Shipment(
                     res.getInt("shipType"),
                     res.getString("deliveryInstruction"),
@@ -172,7 +171,6 @@ public class Order {
                 "update 'Order' set status = ? WHERE id = ?")) {
             preparedStatement.setString(1, status);
             preparedStatement.setInt(2, id);
-
             int affectedRows = preparedStatement.executeUpdate();
 
             if (affectedRows == 0) {
@@ -189,7 +187,6 @@ public class Order {
             preparedStatement.setInt(1, id);
 
             ResultSet res = preparedStatement.executeQuery();
-
             if (res.next()) {
                 Order order = new Order();
                 order.setId(res.getInt(1));
@@ -200,9 +197,7 @@ public class Order {
                 order.setShippingFees(res.getInt("shipping_fee"));
                 order.setStatus(res.getString("status"));
 
-                // Create a list to store OrderMedia objects
                 List<OrderMedia> listOrderMedia = new ArrayList<>();
-
                 String orderMediaQuery = "SELECT mediaID, title, type, imageUrl, OrderMedia.price AS orderMediaPrice, OrderMedia.quantity AS orderMediaQuantity, Media.quantity AS mediaQuantity FROM OrderMedia INNER JOIN Media ON OrderMedia.mediaID = Media.id WHERE orderId = ? ORDER BY mediaID";
                 try (PreparedStatement orderMediaStatement = db.getConnection().prepareStatement(orderMediaQuery)) {
                     orderMediaStatement.setInt(1, id);
@@ -222,7 +217,6 @@ public class Order {
                         listOrderMedia.add(orderMedia);
                     }
                 }
-
                 order.setlstOrderMedia(listOrderMedia);
                 Shipment shipment = new Shipment(
                         res.getInt("shipType"),

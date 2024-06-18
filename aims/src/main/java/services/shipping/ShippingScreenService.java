@@ -63,8 +63,6 @@ public class ShippingScreenService extends BaseScreenService implements Initiali
 
     @FXML
     void submitDeliveryInfo(MouseEvent event) throws IOException, InterruptedException, SQLException {
-
-        // add info to messages
         HashMap messages = new HashMap<>();
         messages.put("name", name.getText());
         messages.put("phone", phone.getText());

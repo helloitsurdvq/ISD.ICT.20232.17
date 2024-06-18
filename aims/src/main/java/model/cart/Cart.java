@@ -7,10 +7,8 @@ import java.sql.*;
 import java.util.*;
 
 public class Cart {
-    // common coupling
     private static Cart cartInstance;
     private List<CartMedia> lstCartMedia;
-
 
     private Cart() {
         lstCartMedia = new ArrayList<>();
@@ -52,7 +50,6 @@ public class Cart {
     }
 
     public void checkAvailabilityOfProduct() throws SQLException {
-        // control coupling
         boolean allAvai = true;
         for (Object object : lstCartMedia) {
             CartMedia cartMedia = (CartMedia) object;

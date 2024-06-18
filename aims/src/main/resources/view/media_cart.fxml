@@ -30,15 +30,15 @@
                     <children>
                         <Label fx:id="title" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="46.0" prefWidth="353.0" text="Title of Media" textAlignment="CENTER" textFill="#5091e6" wrapText="true">
                             <font>
-                                <Font name="Segoe UI" size="25.0" />
+                                <Font name="Arial" size="25.0" />
                             </font>
                             <VBox.margin>
                                 <Insets />
                             </VBox.margin>
                         </Label>
-                        <Button fx:id="btnDelete" mnemonicParsing="false" prefHeight="45.0" prefWidth="166.0" style="-fx-background-color: #dc6c6c; -fx-cursor: hand;" text="Delete" textFill="#f2e6e6">
+                        <Button fx:id="btnDelete" mnemonicParsing="false" prefHeight="45.0" prefWidth="166.0" style="-fx-background-color: #f21313; -fx-cursor: hand;" text="Delete" textFill="#f2e6e6">
                             <font>
-                                <Font size="16.0" />
+                                <Font name="Arial Bold" size="16.0" />
                             </font>
                         </Button>
                     </children>
@@ -58,12 +58,12 @@
                     <children>
                         <Label fx:id="price" alignment="BOTTOM_RIGHT" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="46.0" prefWidth="174.0" text="1,200,300" textAlignment="CENTER" textFill="#5091e6">
                             <font>
-                                <Font name="Segoe UI Bold" size="24.0" />
+                                <Font name="Arial Bold" size="24.0" />
                             </font>
                         </Label>
                         <Label fx:id="currency" alignment="TOP_RIGHT" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="172.0" text="vnđ" textAlignment="CENTER" textFill="#5091e6">
                             <font>
-                                <Font name="Segoe UI" size="24.0" />
+                                <Font name="Arial Bold" size="24.0" />
                             </font>
                         </Label>
                     </children>

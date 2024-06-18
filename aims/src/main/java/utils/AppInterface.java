@@ -15,7 +15,6 @@ import java.util.logging.Logger;
 
 public class AppInterface {
     private static Logger LOGGER = Format.getLogger(Format.class.getName());
-
     private static HttpURLConnection generateConnection(String url, String requestMethod, String token) throws IOException {
         final var conn = (HttpURLConnection) extracted(url).openConnection();
         conn.setDoInput(true);
@@ -28,9 +27,6 @@ public class AppInterface {
         return conn;
     }
 
-    /**
-     * Post methods.
-     */
     public static String post(String url, String data) throws IOException {
         allowMethods("PATCH");
         final String payload = data;

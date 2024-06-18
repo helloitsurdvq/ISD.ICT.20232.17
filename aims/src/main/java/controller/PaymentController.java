@@ -10,10 +10,6 @@ import java.text.ParseException;
 import java.util.Hashtable;
 import java.util.Map;
 
-/**
- * This {@code PaymentController} class controls the flow of the payment process
- * in AIMS.
- */
 public class PaymentController extends BaseController {
     /**
      * Represent the VNPay subsystem

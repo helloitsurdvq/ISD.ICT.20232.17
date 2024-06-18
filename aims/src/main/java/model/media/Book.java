@@ -64,7 +64,6 @@ public class Book extends Media{
     @Override
     public Book from(ResultSet res) throws SQLException {
         super.from(res);
-
         author = res.getString("author");
         coverType = res.getString("coverType");
         publisher = res.getString("publisher");
@@ -95,7 +94,6 @@ public class Book extends Media{
     @Override
     public List<Media> getAllMedia() throws SQLException {
         List<Media> books = new ArrayList<Media>();
-
         String sql = "SELECT *, Media.id AS media_id FROM Media "
                 + "LEFT JOIN Book ON Media.id = Book.id "
                 + "WHERE type = 'book'"

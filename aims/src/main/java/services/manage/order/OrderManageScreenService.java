@@ -101,16 +101,15 @@ public class OrderManageScreenService extends ManageScreenService implements Ini
 
                 if (empty || status == null) {
                     setText(null);
-                    setTextFill(null); // Set default text color if status is null or empty
+                    setTextFill(null);
                 } else {
                     setText(status);
-                    // Set text color based on the status value
                     if ("Approve".equals(status)) {
                         setTextFill(javafx.scene.paint.Color.GREEN);
                     } else if ("Refuse".equals(status)) {
                         setTextFill(javafx.scene.paint.Color.RED);
                     } else {
-                        setTextFill(javafx.scene.paint.Color.ORANGE); // Default text color
+                        setTextFill(javafx.scene.paint.Color.ORANGE);
                     }
                 }
             }
@@ -122,9 +121,9 @@ public class OrderManageScreenService extends ManageScreenService implements Ini
             private final Button refuseButton = new Button("Refuse");
             private final Button viewButton = new Button ("View Detail");
             {
-                approveButton.setStyle("-fx-cursor: hand;");
-                refuseButton.setStyle("-fx-cursor: hand;");
-                viewButton.setStyle("-fx-cursor: hand;");
+                approveButton.setStyle("-fx-cursor: hand; -fx-background-color: #28a745; -fx-text-fill: white;");
+                refuseButton.setStyle("-fx-cursor: hand; -fx-background-color: #dc3545; -fx-text-fill: white;");
+                viewButton.setStyle("-fx-cursor: hand; -fx-background-color: #17a2b8; -fx-text-fill: white;");
             }
             @Override
             protected void updateItem(Order order, boolean empty) {
@@ -167,7 +166,6 @@ public class OrderManageScreenService extends ManageScreenService implements Ini
                 }
             }
         });
-
         orderTableView.getItems().addAll(listOrder);
     }
 

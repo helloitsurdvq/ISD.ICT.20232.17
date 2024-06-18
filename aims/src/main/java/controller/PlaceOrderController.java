@@ -14,19 +14,12 @@ import java.util.Random;
 import java.util.logging.Logger;
 
 public class PlaceOrderController extends BaseController {
-    // common coupling
     private static Logger LOGGER = utils.Format.getLogger(PlaceOrderController.class.getName());
 
-    /**
-     * This method checks the availability of product when user click PlaceOrder
-     */
     public void placeOrder() throws SQLException {
         Cart.getCart().checkAvailabilityOfProduct();
     }
 
-    /**
-     * This method creates the new Order based on the Cart
-     */
     public Order createOrder() throws SQLException {
         Order order = new Order();
         for (Object object : Cart.getCart().getListMedia()) {
@@ -39,9 +32,6 @@ public class PlaceOrderController extends BaseController {
         return order;
     }
 
-    /**
-     * This method creates the new Invoice based on order
-     */
     public Invoice createInvoice(Order order) {
 
         order.createOrderEntity();
@@ -51,16 +41,10 @@ public class PlaceOrderController extends BaseController {
         return new Invoice(order);
     }
 
-    /**
-     * This method takes responsibility for processing the shipping info from user
-     */
     public void processDeliveryInfo(HashMap info) throws InterruptedException, IOException {
         validateDeliveryInfo(info);
     }
 
-    /**
-     * The method validates the info
-     */
     public void validateDeliveryInfo(HashMap<String, String> info) throws InterruptedException, IOException {
 
     }
@@ -91,18 +75,12 @@ public class PlaceOrderController extends BaseController {
         return true;
     }
 
-    /**
-     * This method calculates the shipping fees of order
-     */
     public int calculateShippingFee(int amount) {
         Random rand = new Random();
         int fees = (int) (((rand.nextFloat() * 10) / 100) * amount);
         return fees;
     }
 
-    /**
-     * This method gets product available for place rush order media
-     */
     public Media getProductAvailablePlaceRush(Order order) throws SQLException {
         Media media = new Media();
         for (OrderMedia pd : order.getlstOrderMedia()) {
@@ -114,12 +92,6 @@ public class PlaceOrderController extends BaseController {
         return media;
     }
 
-
-    /**
-     * @param province
-     * @param address
-     * @return boolean
-     */
     public boolean validateAddressPlaceRushOrder(String province, String address) {
         if (!validateContainLetterAndNoEmpty(address))
             return false;
@@ -128,10 +100,6 @@ public class PlaceOrderController extends BaseController {
         return true;
     }
 
-
-    /**
-     * @return boolean
-     */
     public boolean validateMediaPlaceRushorder() {
         if (Media.getIsSupportedPlaceRushOrder())
             return true;

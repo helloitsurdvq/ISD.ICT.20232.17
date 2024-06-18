@@ -112,7 +112,6 @@ public class CD extends Media {
         PreparedStatement stm = db.getConnection().prepareStatement(sql);
         stm.setInt(1, id);
         stm.executeUpdate();
-
         super.delete(id);
     }
 }

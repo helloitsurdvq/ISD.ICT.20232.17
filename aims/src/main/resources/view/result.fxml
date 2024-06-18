@@ -9,9 +9,9 @@
 
 <AnchorPane prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <Label fx:id="pageTitle" layoutX="80.0" layoutY="11.0" prefHeight="96.0" prefWidth="258.0" text="Payment" textAlignment="CENTER" textFill="#5091e6">
+        <Label fx:id="pageTitle" layoutX="80.0" layoutY="11.0" prefHeight="96.0" prefWidth="418.0" text="Payment with VNPay" textAlignment="CENTER" textFill="#5091e6">
             <font>
-                <Font name="Segoe UI Semibold" size="42.0" />
+                <Font name="Arial Bold" size="42.0" />
             </font>
         </Label>
         <ImageView fitHeight="73.0" fitWidth="73.0" layoutX="14.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
@@ -19,19 +19,19 @@
                 <Image url="@../assets/Logo.png" />
             </image>
         </ImageView>
-        <Label fx:id="resultLabel" layoutX="430.0" layoutY="247.0" text="PAYMENT RESULT" textFill="#5091e6">
+        <Label fx:id="resultLabel" alignment="CENTER" layoutX="3.0" layoutY="251.0" prefHeight="84.0" prefWidth="1357.0" text="PAYMENT RESULT" textAlignment="CENTER" textFill="#5091e6">
             <font>
-                <Font name="Calibri Bold" size="72.0" />
+                <Font name="Arial Bold" size="72.0" />
             </font>
         </Label>
-        <Label fx:id="messageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="356.0" layoutY="351.0" prefHeight="216.0" prefWidth="666.0" text="Message" textFill="#5091e6" wrapText="true">
+        <Label fx:id="messageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="3.0" layoutY="350.0" prefHeight="216.0" prefWidth="1358.0" text="Message" textAlignment="CENTER" textFill="#5091e6" wrapText="true">
             <font>
-                <Font name="Calibri" size="36.0" />
+                <Font name="Arial" size="36.0" />
             </font>
         </Label>
-        <Button fx:id="okButton" alignment="CENTER" contentDisplay="CENTER" layoutX="554.0" layoutY="675.0" mnemonicParsing="false" onMouseClicked="#confirmPayment" prefHeight="46.0" prefWidth="316.0" style="-fx-background-color: #5091e6;" text="Return to homepage" textFill="WHITE">
+        <Button fx:id="okButton" alignment="CENTER" contentDisplay="CENTER" layoutX="525.0" layoutY="675.0" mnemonicParsing="false" onMouseClicked="#confirmPayment" prefHeight="46.0" prefWidth="316.0" style="-fx-background-color: #5091e6; -fx-cursor: hand;" text="Return to homepage" textFill="WHITE">
             <font>
-                <Font name="Segoe UI Bold" size="24.0" />
+                <Font name="Arial Bold" size="24.0" />
             </font>
         </Button>
     </children>

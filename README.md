@@ -8,6 +8,7 @@ An Internet Media Store - ITSS Software Developemt capstone project.
     - [Team member](#team-member)
     - [Project organization](#project-organization)
     - [Setup](#setup)
+    - [Final submission](#final-submission)
 
 ## Team member
 
@@ -33,3 +34,6 @@ An Internet Media Store - ITSS Software Developemt capstone project.
    git clone https://github.com/helloitsurdvq/ISD.ICT.20232-17.git
 
 3. Run the application in the main Class [App.java](aims/src/main/java/app/App.java).
+
+## Final Submission
+Our submission can be found in this [link](documents/Final%20Submission) (including the aims design, ERD diagram, the Software Design Document, Use Case specification document and demo video).

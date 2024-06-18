@@ -26,9 +26,6 @@ public class FXMLScreenService {
         return this.loader;
     }
 
-    /**
-     * This is a set image operation.
-     */
     public void setImage(ImageView imv, String path) {
         File file = new File(path);
         Image img = new Image(file.toURI().toString());

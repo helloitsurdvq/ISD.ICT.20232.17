@@ -15,7 +15,7 @@ public class db {
             Class.forName("org.sqlite.JDBC");
             String url = "jdbc:sqlite:aims/src/main/java/database/aims.db";
             connect = DriverManager.getConnection(url);
-            LOGGER.info("Connected to AIMS database.");
+            LOGGER.info("Connected to AIMS database successfully.");
         } catch (Exception e) {
             LOGGER.info(e.getMessage());
             LOGGER.severe("Failed to connect to AIMS database: " + e.getMessage());

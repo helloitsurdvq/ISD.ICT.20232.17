@@ -7,17 +7,8 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.Map;
 
-/***
- * The {@code VNPaySubsystem} class is used to communicate with the
- * VNPay to make transaction.
- */
-
 public class VNPaySubsystem implements VNPayInterface {
     private VNPayController ctrl;
-    /**
-     * Initializes a newly created {@code VNPaySubsystem} object so that it
-     * represents an Interbank subsystem.
-     */
     public VNPaySubsystem() {
         this.ctrl = new VNPayController();
     }

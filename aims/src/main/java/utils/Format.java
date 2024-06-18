@@ -20,12 +20,9 @@ public class Format {
         return defaultFormat.format(num * 1000);
     }
 
-    /**
-     * Return a {@link java.lang.String String} that represents the cipher text
-     * encrypted by md5 algorithm.
-     */
     public static String md5(String message) {
         String digest;
+
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
             byte[] hash = md.digest(message.getBytes("UTF-8"));

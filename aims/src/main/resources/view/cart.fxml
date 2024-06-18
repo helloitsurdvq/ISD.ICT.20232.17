@@ -14,7 +14,7 @@
     <children>
         <Label fx:id="pageTitle" layoutX="60.0" layoutY="-9.0" prefHeight="96.0" prefWidth="128.0" text="CART" textAlignment="CENTER" textFill="#5091e6">
             <font>
-                <Font name="Segoe UI Semibold" size="42.0" />
+                <Font name="Arial Bold" size="42.0" />
             </font>
         </Label>
         <ImageView fx:id="aimsImage" fitHeight="73.0" fitWidth="73.0" layoutX="-6.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
@@ -33,12 +33,12 @@
                     <children>
                         <Label fx:id="subtotal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="163.0" text="Subtotal:" textAlignment="CENTER">
                             <font>
-                                <Font size="24.0" />
+                                <Font name="Arial" size="24.0" />
                             </font>
                         </Label>
                         <Label fx:id="labelSubtotal" prefHeight="55.0" prefWidth="239.0" text="1000000 vnđ" textFill="#5091e6">
                             <font>
-                                <Font size="24.0" />
+                                <Font name="Arial" size="24.0" />
                             </font>
                         </Label>
                     </children>
@@ -47,17 +47,17 @@
                     <children>
                         <Label prefHeight="58.0" prefWidth="54.0" text="VAT" textFill="#e42e2e">
                             <font>
-                                <Font name="System Bold" size="24.0" />
+                                <Font name="Arial Bold" size="24.0" />
                             </font>
                         </Label>
                         <Label prefHeight="58.0" prefWidth="106.0" text="(10%):" textFill="#e43030">
                             <font>
-                                <Font name="System Bold" size="24.0" />
+                                <Font name="Arial Bold" size="24.0" />
                             </font>
                         </Label>
                         <Label fx:id="labelVAT" prefHeight="58.0" prefWidth="167.0" text="100000 vnđ" textFill="#5091e6">
                             <font>
-                                <Font size="24.0" />
+                                <Font name="Arial" size="24.0" />
                             </font>
                         </Label>
                     </children>
@@ -71,21 +71,26 @@
                         </Label>
                         <Label fx:id="labelAmount" prefHeight="45.0" prefWidth="206.0" text="1100000 vnđ" textFill="#5091e6">
                             <font>
-                                <Font size="24.0" />
+                                <Font name="Arial" size="24.0" />
                             </font>
                         </Label>
                     </children>
                 </HBox>
                 <AnchorPane prefHeight="138.0" prefWidth="344.0">
                     <children>
-                        <Button fx:id="btnPlaceOrder" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="75.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="316.0" style="-fx-background-color: #Ff4d4d; -fx-cursor: hand;" text="Place order" textFill="WHITE">
+                        <Button fx:id="btnPlaceOrder" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="37.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="316.0" style="-fx-background-color: #Ff4d4d; -fx-cursor: hand;" text="Place order" textFill="WHITE">
                             <font>
-                                <Font name="Segoe UI Bold" size="24.0" />
+                                <Font name="Arial Bold" size="24.0" />
                             </font>
                         </Button>
                     </children>
                 </AnchorPane>
             </children>
         </VBox>
+      <Button layoutX="1120.0" layoutY="362.0" mnemonicParsing="false" style="-fx-cursor: hand;" text="Go back">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>

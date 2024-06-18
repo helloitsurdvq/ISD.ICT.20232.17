@@ -5,20 +5,10 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.lang.reflect.Field;
 
-/**
- * The {@link utils.CustomMap JSON} class represents JSON objects.
- * To create a new JSON object,
- * JSON jsonObject = new JSON();
- * jsonObject.put("key", value);
- */
 public class CustomMap extends LinkedHashMap<String, Object> {
     private static final long serialVersionUID = 1L;
-    private static int offset = 0; // to trace the current index when calling a function
+    private static int offset = 0;
 
-    /**
-     * Return a {@link java.util.Map Map} that represents the mapping among
-     * attribute names and their values of an object.
-     */
     public static Map<String, Object> toMyMap(Object obj) throws IllegalArgumentException, IllegalAccessException {
         Map<String, Object> map = new CustomMap();
         for (Field field : obj.getClass().getDeclaredFields()) {
@@ -37,10 +27,6 @@ public class CustomMap extends LinkedHashMap<String, Object> {
         return map;
     }
 
-    /**
-     * Return a {@link java.lang.String String} that represents the term in between
-     * 2 double quote.
-     */
     private static String getNextTerm(String str, int idx) {
         if (str == null || idx >= str.length() || str.charAt(idx) != '"') {
             throw new IllegalArgumentException("Cannot resolve the input.");
@@ -65,9 +51,6 @@ public class CustomMap extends LinkedHashMap<String, Object> {
         return sb.toString();
     }
 
-    /**
-     * Return a {@link utils.CustomMap CustomMap} that represents the interested substring in a {@link java.lang.String String}.
-     */
     public static CustomMap toCustomMap(String str, int idx) throws IllegalArgumentException {
         if (str == null || str.length() < 2 || str.charAt(idx) != '{') {
             throw new IllegalArgumentException("Cannot resolve the input.");
@@ -144,9 +127,6 @@ public class CustomMap extends LinkedHashMap<String, Object> {
         return root;
     }
 
-    /**
-     * Return a {@link java.lang.String String} that represents the JSON object.
-     */
     public String toJSON() {
         int max = size() - 1;
         if (max == -1)
@@ -154,7 +134,6 @@ public class CustomMap extends LinkedHashMap<String, Object> {
 
         StringBuilder sb = new StringBuilder();
         Iterator<Map.Entry<String, Object>> it = entrySet().iterator();
-
         sb.append('{');
         for (int i = 0; ; i++) {
             Map.Entry<String, Object> e = it.next();

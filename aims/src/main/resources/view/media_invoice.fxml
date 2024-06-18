@@ -29,7 +29,7 @@
                     <children>
                         <Label fx:id="title" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="46.0" prefWidth="269.0" text="Title of Media" textAlignment="CENTER" textFill="#5091e6" wrapText="true">
                             <font>
-                                <Font name="Segoe UI" size="25.0" />
+                                <Font name="Arial" size="25.0" />
                             </font>
                             <VBox.margin>
                                 <Insets />
@@ -37,10 +37,13 @@
                         </Label>
                         <HBox prefHeight="42.0" prefWidth="269.0">
                             <children>
-                                <Label alignment="CENTER" prefHeight="26.0" prefWidth="23.0" text="x" />
+                                <Label alignment="CENTER" prefHeight="26.0" prefWidth="23.0" text="x">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font></Label>
                                 <Label fx:id="numOfProd" prefHeight="26.0" prefWidth="176.0" text="number of products">
                                     <font>
-                                        <Font size="16.0" />
+                                        <Font name="Arial" size="16.0" />
                                     </font>
                                 </Label>
                             </children>
@@ -62,7 +65,7 @@
                     <children>
                         <Label fx:id="price" alignment="BOTTOM_RIGHT" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="99.0" text="1,200,300" textAlignment="CENTER" textFill="#5091e6">
                             <font>
-                                <Font size="16.0" />
+                                <Font name="Arial" size="16.0" />
                             </font>
                         </Label>
                     </children>
