@@ -30,9 +30,9 @@ An Internet Media Store - ITSS Software Developemt capstone project.
 
 1. Press the Fork button (top right the page) to save copy of this project.
 2. Download the repository files (project) from the download section or clone this project to your local machine by typing in the bash the following command:
-
+    ```shell
    git clone https://github.com/helloitsurdvq/ISD.ICT.20232-17.git
-
+    ```
 3. Run the application in the main Class [App.java](aims/src/main/java/app/App.java).
 
 ## Final Submission
