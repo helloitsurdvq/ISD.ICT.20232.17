@@ -26,10 +26,9 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
-import java.util.logging.Logger;
 
 public class DetailOrderScreenService extends ManageScreenService implements Initializable {
-    private static Logger LOGGER = Format.getLogger(HomeService.class.getName());
+
     private Order order;
 
     private int orderId;
@@ -115,7 +114,6 @@ public class DetailOrderScreenService extends ManageScreenService implements Ini
     }
 
     public void showDetailOrder() throws SQLException {
-        LOGGER.info("Showing details for order ID: " + orderId);
         Order order = getBController().getOrderById(orderId);
         // Customer information
         customerName.setText(order.getName());
@@ -176,7 +174,6 @@ public class DetailOrderScreenService extends ManageScreenService implements Ini
                 @Override
                 protected void updateItem(String imageUrl, boolean empty) {
                     super.updateItem(imageUrl, empty);
-                    LOGGER.info(imageUrl);
                     if (empty) {
                         setGraphic(null);
                     } else {

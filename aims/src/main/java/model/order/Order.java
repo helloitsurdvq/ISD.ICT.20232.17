@@ -9,9 +9,7 @@ import services.home.HomeService;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 public class Order {
-    private static Logger LOGGER = Format.getLogger(HomeService.class.getName());
     private int shippingFees;
     private List<OrderMedia> lstOrderMedia;
     private Shipment shipment;
@@ -123,11 +121,10 @@ public class Order {
                 }
             }
 
-            String sqlinsertShipment = "INSERT INTO Shipment (shipType, deliveryInstruction, dateTime, deliverySub, orderId) " +
+            String sqlInsertShipment = "INSERT INTO Shipment (shipType, deliveryInstruction, dateTime, deliverySub, orderId) " +
                     "VALUES ( ?, ?, ?, ?, ?)";
-            try (PreparedStatement preparedStatement2 = db.getConnection().prepareStatement(sqlinsertShipment)) {
-
-                LOGGER.info(sqlinsertShipment);
+            try (PreparedStatement preparedStatement2 = db.getConnection().prepareStatement(sqlInsertShipment)) {
+                System.out.println(sqlInsertShipment);
                 preparedStatement2.setInt(1, shipment.getShipType());
                 preparedStatement2.setString(2, shipment.getDeliveryInstruction());
                 preparedStatement2.setString(3, shipment.getDeliveryTime());
@@ -269,7 +266,7 @@ public class Order {
         double amount = 0;
         for (Object object : lstOrderMedia) {
             OrderMedia om = (OrderMedia) object;
-            amount += om.getPrice();
+            amount += (om.getPrice()*om.getQuantity());
         }
         return (int) (amount + (Configs.PERCENT_VAT / 100) * amount);
     }

@@ -2,9 +2,9 @@ package controller;
 
 import model.media.Media;
 import model.media.Book;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
 import java.sql.SQLException;
 
 public class MediaController extends BaseController {

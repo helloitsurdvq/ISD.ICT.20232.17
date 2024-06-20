@@ -17,10 +17,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.logging.Logger;
 
 public class InvoiceScreenService extends BaseScreenService {
-    private static Logger LOGGER = Format.getLogger(InvoiceScreenService.class.getName());
     @FXML
     private Label pageTitle;
 

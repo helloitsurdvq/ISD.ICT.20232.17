@@ -20,11 +20,9 @@ import javafx.scene.layout.VBox;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.logging.Logger;
 import java.sql.SQLException;
 
 public class CartMediaService extends FXMLScreenService {
-    private static Logger LOGGER = Format.getLogger(CartMediaService.class.getName());
     @FXML
     protected HBox hboxMedia;
     @FXML
@@ -73,7 +71,7 @@ public class CartMediaService extends FXMLScreenService {
             try {
                 Cart.getCart().removeCartMedia(cartMedia);
                 cartScreen.updateCart(); // re-display user cart
-                LOGGER.info("Deleted " + cartMedia.getMedia().getTitle() + " from the cart");
+                System.out.println("Deleted " + cartMedia.getMedia().getTitle() + " from the cart");
             } catch (SQLException exp) {
                 exp.printStackTrace();
                 throw new ViewCartException();
@@ -89,9 +87,9 @@ public class CartMediaService extends FXMLScreenService {
         spinner.setOnMouseClicked(e -> {
             int numOfProd = this.spinner.getValue();
             int remainQuantity = cartMedia.getMedia().getQuantity();
-            LOGGER.info("Product quantity: " + numOfProd + " -- Product remaining: " + remainQuantity);
+            System.out.println("Product quantity: " + numOfProd + "; Remaining product: " + remainQuantity);
             if (numOfProd > remainQuantity) {
-                LOGGER.info("Product " + cartMedia.getMedia().getTitle() + " only remains " + remainQuantity + " (required " + numOfProd + ")");
+                System.out.println("Product " + cartMedia.getMedia().getTitle() + " only remains " + remainQuantity + " (required " + numOfProd + ")");
                 labelOutOfStock.setText("Sorry, Only " + remainQuantity + " remain in stock");
                 spinner.getValueFactory().setValue(remainQuantity);
                 numOfProd = remainQuantity;

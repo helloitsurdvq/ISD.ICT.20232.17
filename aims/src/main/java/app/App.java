@@ -1,5 +1,8 @@
 package app;
 
+import utils.Configs;
+import services.home.HomeScreenService;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -8,8 +11,6 @@ import javafx.animation.FadeTransition;
 import javafx.scene.image.Image;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
-import utils.Configs;
-import services.home.HomeScreenService;
 
 import java.io.IOException;
 

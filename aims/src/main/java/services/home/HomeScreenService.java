@@ -31,12 +31,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class HomeScreenService extends BaseScreenService implements Initializable {
-    public static Logger LOGGER = Format.getLogger(HomeScreenService.class.getName());
-
     @FXML
     private Label numMediaInCart;
 
@@ -103,7 +99,6 @@ public class HomeScreenService extends BaseScreenService implements Initializabl
                 this.homeItems.add(m1);
             }
         } catch (SQLException | IOException e) {
-            LOGGER.info("Errors occured: " + e.getMessage());
             e.printStackTrace();
         }
 
@@ -116,7 +111,6 @@ public class HomeScreenService extends BaseScreenService implements Initializabl
         cartImage.setOnMouseClicked(e -> {
             CartScreenService cartScreen;
             try {
-                LOGGER.info("User views cart");
                 cartScreen = new CartScreenService(this.stage, Configs.CART_SCREEN_PATH);
                 cartScreen.setHomeScreenHandler(this);
                 cartScreen.setBController(new ViewCartController());
@@ -129,7 +123,6 @@ public class HomeScreenService extends BaseScreenService implements Initializabl
         loginBtn.setOnMouseClicked(e -> {
             LoginScreenService loginScreen;
             try {
-                LOGGER.info("User logs in");
                 loginScreen = new LoginScreenService(this.stage, Configs.LOGIN_SCREEN_PATH);
                 loginScreen.setHomeScreenHandler(this);
                 loginScreen.setBController(new AuthController());
@@ -159,7 +152,6 @@ public class HomeScreenService extends BaseScreenService implements Initializabl
                         this.searchItems.add(m1);
                     }
                 } catch (SQLException | IOException e) {
-                    LOGGER.info("Errors occured: " + e.getMessage());
                     e.printStackTrace();
                 }
             }
@@ -175,7 +167,6 @@ public class HomeScreenService extends BaseScreenService implements Initializabl
                         }
                     }
                 } catch (SQLException | IOException e) {
-                    LOGGER.info("Errors occured: " + e.getMessage());
                     e.printStackTrace();
                 }
             }
@@ -207,7 +198,7 @@ public class HomeScreenService extends BaseScreenService implements Initializabl
             Image image = new Image(imageUrl.toString());
             imageView.setImage(image);
         } else {
-            Logger.getLogger(getClass().getName()).log(Level.SEVERE, "Image file not found in classpath: " + imagePath);
+            System.out.println("Image file not found in classpath: \" + imagePath");
         }
     }
 
@@ -239,13 +230,11 @@ public class HomeScreenService extends BaseScreenService implements Initializabl
         label.setTextAlignment(TextAlignment.RIGHT);
         menuItem.setGraphic(label);
         menuItem.setOnAction(e -> {
-            // empty home media
             hboxMedia.getChildren().forEach(node -> {
                 VBox vBox = (VBox) node;
                 vBox.getChildren().clear();
             });
 
-            // filter only media with the chosen category
             List filteredItems = new ArrayList<>();
             homeItems.forEach(me -> {
                 HomeService media = (HomeService) me;
@@ -253,8 +242,6 @@ public class HomeScreenService extends BaseScreenService implements Initializabl
                     filteredItems.add(media);
                 }
             });
-
-            // fill out the home with filtered media as category
             addMediaHome(filteredItems);
         });
         menuButton.getItems().add(position, menuItem);

@@ -11,10 +11,8 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Random;
-import java.util.logging.Logger;
 
 public class PlaceOrderController extends BaseController {
-    private static Logger LOGGER = utils.Format.getLogger(PlaceOrderController.class.getName());
 
     public void placeOrder() throws SQLException {
         Cart.getCart().checkAvailabilityOfProduct();

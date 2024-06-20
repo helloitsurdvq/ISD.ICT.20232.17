@@ -27,9 +27,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-import java.util.logging.Logger;
+
 public class MediaManageScreenService extends ManageScreenService implements Initializable {
-    public static Logger LOGGER = Format.getLogger(ManageScreenService.class.getName());
     private final String BOOK = "book";
     private final String DVD = "dvd";
     private final String CD = "cd";

@@ -7,9 +7,7 @@ import model.order.Order;
 import model.order.OrderMedia;
 import model.Shipment;
 import services.PopUpScreenService;
-import services.home.HomeService;
 import utils.Configs;
-import utils.Format;
 
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.fxml.FXML;
@@ -27,11 +25,8 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
-import java.util.logging.Logger;
 
 public class OrderManageScreenService extends ManageScreenService implements Initializable {
-    private static Logger LOGGER = Format.getLogger(HomeService.class.getName());
-
     @FXML
     private TableView<Order> orderTableView;
 
@@ -156,7 +151,6 @@ public class OrderManageScreenService extends ManageScreenService implements Ini
                     });
                     viewButton.setOnAction(e -> {
                         try {
-                            LOGGER.info(String.valueOf(order.getId()));
                             openDetailOrder(order.getId());
                         } catch (IOException | SQLException ex) {
                             throw new RuntimeException(ex);
@@ -201,8 +195,7 @@ public class OrderManageScreenService extends ManageScreenService implements Ini
         for (OrderMedia orderMedia : listOrderMedia) {
             Media media = orderMedia.getMedia();
             int requestedQuantity = orderMedia.getQuantity();
-            LOGGER.info("Number Requested" + String.valueOf(requestedQuantity));
-            LOGGER.info("Number Media" + String.valueOf(media.getQuantity()));
+            System.out.println("Number Requested" + String.valueOf(requestedQuantity) + "; Number Media" + String.valueOf(media.getQuantity()));
             // Check if the requested quantity exceeds the available quantity
             if (requestedQuantity > media.getQuantity()) {
                 return false;

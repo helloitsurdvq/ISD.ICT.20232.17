@@ -25,11 +25,8 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class CartScreenService extends BaseScreenService {
-    private static Logger LOGGER = Format.getLogger(CartScreenService.class.getName());
     @FXML
     VBox vboxCart;
     @FXML
@@ -70,13 +67,11 @@ public class CartScreenService extends BaseScreenService {
         if (imageUrl != null) {
             return new Image(imageUrl.toString());
         } else {
-            Logger.getLogger(CartScreenService.class.getName()).log(Level.SEVERE, "Image file not found in classpath: " + imagePath);
             URL defaultImageUrl = getClass().getResource("/assets/Logo.png");
             if (defaultImageUrl != null) {
                 return new Image(defaultImageUrl.toString());
             } else {
-                // Handle the case where the default image is also not found
-                Logger.getLogger(CartScreenService.class.getName()).log(Level.SEVERE, "Default image file not found.");
+                System.out.println("Image path not found");
                 return null;
             }
         }

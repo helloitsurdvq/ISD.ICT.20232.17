@@ -10,11 +10,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.logging.Logger;
 
 public class Media {
-    protected static boolean isSupportedPlaceRushOrder = new Random().nextBoolean();
-    private static Logger LOGGER = Format.getLogger(Media.class.getName());
     protected Statement stm;
     protected int id;
     protected String title;
@@ -24,6 +21,7 @@ public class Media {
     protected int quantity;
     protected String type;
     protected String imageURL;
+    protected static boolean isSupportedPlaceRushOrder = new Random().nextBoolean();
 
     public Media() {
         try {
