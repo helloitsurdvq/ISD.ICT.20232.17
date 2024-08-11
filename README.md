@@ -1,6 +1,6 @@
 # ISD.ICT.20232-17
 
-An Internet Media Store - ITSS Software Developemt capstone project.
+An Internet Media Store - ITSS Software Development capstone project.
 
 ## Table of contents
 
@@ -23,8 +23,8 @@ An Internet Media Store - ITSS Software Developemt capstone project.
 ## Project organization
 
 - `aims`: official AIMS project source code.
-- `documents`: requirement analysis, architectural and detailed design, unit test documents for the project
-- `README.md`: weekly report file, individuals are required to update their tasks and how their do it into this file
+- `documents`: requirement analysis, architectural and detailed design, unit test documents for the project.
+- `README.md`: weekly report and description file, individuals are required to update their tasks.
 
 ## Setup
 
@@ -36,4 +36,4 @@ An Internet Media Store - ITSS Software Developemt capstone project.
 3. Run the application in the main Class [App.java](aims/src/main/java/app/App.java).
 
 ## Final Submission
-Our submission can be found in this [link](documents/Final%20Submission) (including the aims design, ERD diagram, the Software Design Document, Use Case specification document and demo video).
+Our submission can be found in this [link](documents/Final%20Submission) (including the AIMS software design, ERD diagram, software design document, use case specification document and demo video).
